@@ -104,7 +104,7 @@ while(data != 0){
 let elementsInArray = array.length;
 console.log(elementsInArray);
 
-// Creo una variable con el nuevo array vacía para luego ir llenando con los elementos dependiendo el caso
+// Creo una variable con el nuevo array vacío para luego ir llenando con los elementos que formaran los 3 arrays nuevos
 let newArray;
 
 switch (true) {
@@ -113,18 +113,18 @@ switch (true) {
         newArray = array;
         break;
     case elementsInArray % 3 == 1:
-        //En este caso, elimino el primer elemento del array ya que la cantidad es impar
+        //En este caso, elimino el primer elemento del array 
         newArray = array.slice(1, elementsInArray);
         break;
     case elementsInArray % 3 == 2:
-        //En este caso, elimino el primer y último elemento
+        //En este caso, elimino el primer y último elemento 
         newArray = array.slice(1, elementsInArray - 1);
         break;
     default:
         console.log("error");
 }
 
-//Al nuevo array lo divido por 3 y creo 3 nuevos arrays con la misma catidad de elementos
+//Al nuevo array lo divido en 3 y creo 3 nuevos arrays con la misma catidad de elementos
 let arrayDivision = newArray.length / 3;
 let newArray1 = newArray.slice(0, arrayDivision);
 let newArray2 = newArray.slice(arrayDivision, arrayDivision * 2);
